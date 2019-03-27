@@ -1,26 +1,29 @@
-x = [7,2,5,4,10,12,5,4,4]
 
-def sort(x):
+
+def sort(list_of_elements):
+
     less = []
     equal = []
     greater = []
+    number_of_elements = len(list_of_elements)
 
-    if len(x) > 1:
-        pivot = x[0]
-        for i in x:
+    if number_of_elements > 1:
+
+        pivot = list_of_elements[0]
+        print("Number_of_elements=%d and pivot=%d" % (number_of_elements, pivot))
+        for i in list_of_elements:
             if i < pivot:
                 less.append(i)
             if i == pivot:
                 equal.append(i)
             if i > pivot:
                 greater.append(i)
-        # Don't forget to return something!
         print("less", less, "equal", equal, "greater", greater)
-        return sort(less)+equal+sort(greater)  # Just use the + operator to join lists
+        return sort(less) + equal + sort(greater)  #No sort for equal elements!
+    else:
+        return list_of_elements
 
-    # Note that you want equal ^^^^^ not pivot
-    else:  # You need to hande the part at the end of the recursion - when you only have one element in your array, just return the array.
-        return x
 
+x = [7, 2, 5, 4, 10, 12, 5, 4, 4]
 q = sort(x)
-print (q)
+print(q)
