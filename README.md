@@ -8,7 +8,7 @@
 </head>
 <body>
  The first elements of a sorted list is a pivot. The comparision between pivot with other elements in the list is made.
- If the elements are less then pivot then they are put to "less" list if greater to "greater" list and if equal to "equal" list. Next the smaller list are sorted in the same way until the lenght of list is equal zero. In return the less and greater list are sorting not equal.
+ If the elements are less than pivot then they are put to "less" list if greater they are put to "greater" list and if equal to "equal" list. Next the smallers list are sorted in the same way until the lenght of lists is one. In return the less and greater list are sorting not equal.
  For x = [7, 2, 5, 4, 10, 12, 5, 4, 4] the results of next iterations is: <br> <br>
   
 Number_of_elements=9 and pivot=7 <br>
